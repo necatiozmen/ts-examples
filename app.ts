@@ -48,8 +48,30 @@ function multiply(value1: number, value2: number): number{
 }
 
 //function types
+//function alacagi argument ve return edeecegi typelari belirleyebiliriz.
 let myMultiply: (a: number, b: number) => number;
-myMultiply = sayHello;
-myMultiply();
+// myMultiply = sayHello;
+// myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
+
+//objects
+//objeclerde siralama onemli olmadigi icin property namelerin uyusmasi gerekiyor.
+let userData: { name: string, age: number } = {
+    name: 'max',
+    age: 27
+};
+
+// userData = {
+//     a: "Hello",
+//     b: 22
+// }
+
+
+// complex object
+let complex: {data: number[], output: (all: boolean) => number[]} = {
+    data:[100, 3.99, 10],
+    output: function(all:boolean): number[] {
+        return this.data;
+    }
+}
